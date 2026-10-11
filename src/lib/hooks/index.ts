@@ -1,0 +1,1 @@
+export { default as useGetScreenSize } from './useGetScreenSize'

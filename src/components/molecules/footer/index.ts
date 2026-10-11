@@ -1,0 +1,1 @@
+export { default as DFooter } from './DFooter'
