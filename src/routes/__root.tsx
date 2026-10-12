@@ -1,7 +1,7 @@
 import { Outlet, createRootRoute } from '@tanstack/react-router'
 import { DNavbar } from '#/components'
 import { DFooter } from '#/components/molecules/footer'
-import { Analytics } from '@vercel/analytics/next'
+import { Analytics } from '@vercel/analytics/react'
 import '../styles.css'
 
 
