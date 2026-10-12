@@ -1,6 +1,7 @@
 import { Outlet, createRootRoute } from '@tanstack/react-router'
 import { DNavbar } from '#/components'
 import { DFooter } from '#/components/molecules/footer'
+import { Analytics } from '@vercel/analytics/next'
 import '../styles.css'
 
 
@@ -14,6 +15,7 @@ function RootComponent() {
       <DNavbar />
       <Outlet />
       <DFooter />
+      <Analytics />
     </main>
   )
 }
