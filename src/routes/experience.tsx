@@ -97,7 +97,7 @@ function RouteComponent() {
                   {item.fieldOfStudy ? ` · ${item.fieldOfStudy}` : ''}
                 </p>
                 <p className="text-primary text-sm">
-                  {item.startYear} – {item.endYear}
+                  {item.startYear} {item.endYear ? `– ${item.endYear}` : ''}
                 </p>
               </div>
             ))}

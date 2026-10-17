@@ -6,12 +6,13 @@ import {
   CardContent,
 } from '#/components/ui/card'
 import { formatNumberPadStart } from '#/lib'
-/* import { Link } from '@tanstack/react-router'
-import { ArrowRightIcon } from 'lucide-react' */
+import { Link } from '@tanstack/react-router'
+import { ArrowRightIcon } from 'lucide-react'
 
 type Props = {
   item: {
     label: string
+    slug: string
     subtitle: string
     summary: string
     tags: string[]
@@ -45,14 +46,14 @@ const DFeaturedWorkCard = ({ item, index }: Props) => {
         </div>
 
         <div className="pt-8">
-       {/*    <Link
+       <Link
             to={'/projects/$slug'}
-            params={{ slug: item.label }}
+            params={{ slug: item.slug }}
             className={'flex items-center gap-2 group'}
           >
             View Case Study{' '}
             <ArrowRightIcon className="size-3 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link> */}
+          </Link>
         </div>
       </CardContent>
     </Card>
