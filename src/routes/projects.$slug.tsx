@@ -2,8 +2,9 @@ import { DImageCard } from '#/components/molecules/cards'
 import { Separator } from '#/components/ui/separator'
 import { useScrollReveal } from '#/hooks/use-scroll-reveal'
 import { DB_CONSTANT, formatNumberPadStart } from '#/lib'
+import { Button } from '@base-ui/react'
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { ArrowLeft } from 'lucide-react'
+import { ArrowDown, ArrowLeft, Play } from 'lucide-react'
 
 export const Route = createFileRoute('/projects/$slug')({
   component: RouteComponent,
@@ -46,6 +47,11 @@ function RouteComponent() {
                 {i}
               </div>
             ))}
+            <Link to="." hash="approach" className="flex items-center gap-2 px-3 py-1.5 text-primary hover:bg-white rounded-full">
+              <Play />
+              Watch the demo
+              <ArrowDown className="size-4 animate-bounce" />
+            </Link>
           </div>
         </div>
       </section>
@@ -77,8 +83,28 @@ function RouteComponent() {
             <div className="text-primary font-semibold uppercase w-1/6">
               {data.approach.label}
             </div>
-            <div className="flex-1 whitespace-pre-line">
-              {data.approach.description}
+            <div id="approach" className="flex-1">
+              {data.media?.type === 'video' && (
+                <figure className="video">
+                  <div className="video-frame">
+                    <iframe
+                      src={data.media.url}
+                      title="Onboarding methodology demo: fictional employee, Olawande"
+                      loading="lazy"
+                      allow="autoplay; fullscreen"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  {data.media.caption && (
+                    <figcaption className="text-center text-sm mt-1 text-primary text-pretty">
+                      {data.media.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              )}
+              <div className="whitespace-pre-line mt-2">
+                {data.approach.description}
+              </div>
             </div>
           </div>
         )}

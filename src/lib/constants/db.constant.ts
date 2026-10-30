@@ -74,6 +74,11 @@ export const DB_CONSTANT = {
         slug: 'building-an-hr-people-operations-infrastructure',
         badge: 'Professional Project',
         subtitle: 'Dezick Architects',
+        media: {
+          type: 'video',
+          url: 'https://drive.google.com/file/d/1hH7QbI6XRKuncj5rZHgqtLRazxITkgpc/preview',
+          caption: 'Onboarding System Formular Video',
+        },
         summary:
           'Designed a practical HR foundation for a growing architectural practice, bringing employee documentation, policies, recruitment, onboarding, performance management, employee relations and offboarding into one connected framework.',
         tags: [
