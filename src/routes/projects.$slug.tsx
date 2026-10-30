@@ -2,7 +2,6 @@ import { DImageCard } from '#/components/molecules/cards'
 import { Separator } from '#/components/ui/separator'
 import { useScrollReveal } from '#/hooks/use-scroll-reveal'
 import { DB_CONSTANT, formatNumberPadStart } from '#/lib'
-import { Button } from '@base-ui/react'
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { ArrowDown, ArrowLeft, Play } from 'lucide-react'
 
